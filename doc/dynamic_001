@@ -1,0 +1,44 @@
+Booting: production
+Endpoint: "/"
+## Impact of `require <file>` on RAM
+
+Showing all `require <file>` calls that consume 0.3 MiB or more of RSS
+Configure with `CUT_OFF=0` for all entries or `CUT_OFF=5` for few entries
+Note: Files only count against RAM on their first load.
+      If multiple libraries require the same file, then
+       the 'cost' only shows up under the first library
+
+TOP: 37.4531 MiB
+  mail: 9.457 MiB
+    mime/types: 8.2891 MiB
+    mail/field: 0.3281 MiB
+  application: 7.0547 MiB
+    sass-rails: 3.3945 MiB
+      sass/rails: 3.3945 MiB
+        sass/rails/helpers: 2.8828 MiB (Also required by: sass/rails/template)
+          sass: 2.8672 MiB (Also required by: sass/rails/importer, sass/rails/template, and 2 others)
+            sass/engine: 2.5195 MiB
+              sass/script: 1.4258 MiB (Also required by: sass/script/css_parser)
+                sass/script/value: 0.9141 MiB
+                  sass/script/value/color: 0.4141 MiB
+                sass/script/functions: 0.3633 MiB (Also required by: sass/script/tree/funcall)
+            sass/version: 0.332 MiB
+        sass/rails/importer: 0.4258 MiB
+          tilt: 0.3945 MiB (Also required by: sass/rails/template)
+    pg: 1.9375 MiB (Also required by: active_record/connection_adapters/postgresql_adapter)
+      pg_ext: 1.7188 MiB
+    uglifier: 0.7266 MiB
+      execjs: 0.6289 MiB (Also required by: coffee_script)
+        execjs/runtimes: 0.5547 MiB
+    jbuilder: 0.4258 MiB
+  active_record/relation/predicate_builder: 4.3281 MiB
+  /Users/Juan/dev/iso3166_exp/app/controllers/application_controller: 1.3438 MiB
+  action_view/base: 1.1914 MiB (Also required by: action_view/view_paths)
+    action_view/template: 0.8125 MiB (Also required by: action_view/template/resolver, TOP)
+      erubis: 0.4492 MiB (Also required by: /Users/Juan/dev/iso3166_exp/app/controllers/application_controller)
+        erubis/engine: 0.3477 MiB (Also required by: erubis/engine/eruby)
+  active_record/relation: 0.9492 MiB
+  action_dispatch/journey: 0.8164 MiB
+    action_dispatch/journey/router: 0.5313 MiB
+  action_dispatch/middleware/session/abstract_store: 0.5547 MiB
+  ipaddr: 0.375 MiB (Also required by: active_record/connection_adapters/postgresql_adapter)

@@ -1,0 +1,59 @@
+TOP: 22.7031 MiB
+  rails/all: 14.957 MiB
+    active_record/railtie: 6.2539 MiB
+      active_record: 5.3945 MiB
+        arel: 2.668 MiB
+          arel/visitors: 1.4844 MiB
+            arel/visitors/to_sql: 0.5898 MiB
+        active_record/migration/join_table: 0.5039 MiB
+      action_controller/railtie: 0.7773 MiB (Also required by: rails/all, sprockets/railtie)
+        action_controller: 0.582 MiB
+    rails: 4.6328 MiB (Also required by: active_record/railtie, active_model/railtie, and 5 others)
+      rails/application: 3.4648 MiB
+        rails/engine: 2.8828 MiB (Also required by: coffee/rails/engine)
+          rails/railtie: 2.7852 MiB (Also required by: global_id/railtie, sprockets/railtie)
+            rails/configuration: 2.6133 MiB (Also required by: active_support/i18n_railtie)
+              active_support/core_ext/object: 2.5234 MiB
+                active_support/core_ext/object/conversions: 2.1953 MiB
+                  active_support/core_ext/hash/conversions: 1.5 MiB
+                    active_support/time: 1.3398 MiB
+                      active_support/core_ext/time: 0.8633 MiB
+                        active_support/core_ext/time/calculations: 0.7344 MiB (Also required by: active_support/core_ext/numeric/time, active_support/core_ext/string/conversions)
+                          active_support/core_ext/time/conversions: 0.3789 MiB (Also required by: active_support/core_ext/time, active_support/core_ext/date_time/conversions)
+                            active_support/values/time_zone: 0.3789 MiB (Also required by: active_support/time_with_zone, active_support/core_ext/date_time/conversions)
+                              tzinfo: 0.3359 MiB
+                  active_support/core_ext/array/conversions: 0.625 MiB (Also required by: active_support/duration, active_support/core_ext/array)
+                    active_support/xml_mini: 0.5273 MiB (Also required by: active_support/core_ext/hash/conversions)
+        yaml: 0.332 MiB
+          psych: 0.332 MiB
+      action_dispatch/railtie: 0.5234 MiB (Also required by: action_controller/railtie)
+        action_dispatch: 0.4805 MiB (Also required by: action_controller)
+      active_support/core_ext/kernel/reporting: 0.3086 MiB (Also required by: active_support/xml_mini/rexml, active_record)
+        active_support/deprecation: 0.3008 MiB (Also required by: active_support/rails, action_dispatch/http/response, and 6 others)
+    sprockets/railtie: 3.6953 MiB (Also required by: sass/rails/railtie)
+      sprockets/rails/helper: 2.7305 MiB
+        action_view/helpers/form_tag_helper: 1.4805 MiB
+          rails-html-sanitizer: 1.3438 MiB
+            loofah: 1.3008 MiB
+              nokogiri: 1.1133 MiB
+                nokogiri/html: 0.3867 MiB
+      sprockets: 0.8906 MiB (Also required by: sprockets/rails/helper)
+    action_mailer/railtie: 0.3711 MiB
+  sass-rails: 4.5078 MiB
+    sass/rails: 4.5 MiB
+      sass/rails/helpers: 3.8789 MiB (Also required by: sass/rails/template)
+        sass: 3.8672 MiB (Also required by: sass/rails/importer, sass/rails/template, and 2 others)
+          sass/engine: 3.5469 MiB
+            sass/script: 1.668 MiB (Also required by: sass/script/css_parser)
+              sass/script/value: 0.7383 MiB
+                sass/script/value/number: 0.3242 MiB
+              sass/script/tree: 0.457 MiB
+            sass/tree/visitors/convert: 0.3008 MiB
+          sass/version: 0.3203 MiB
+      sass/rails/importer: 0.4609 MiB
+        tilt: 0.418 MiB (Also required by: sass/rails/template)
+  pg: 1.8516 MiB
+    pg_ext: 1.6133 MiB
+  uglifier: 0.9453 MiB
+    execjs: 0.7734 MiB (Also required by: coffee_script)
+      execjs/runtimes: 0.6836 MiB
