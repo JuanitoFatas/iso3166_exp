@@ -1,0 +1,48 @@
+Booting: production
+Endpoint: "/"
+## Impact of `require <file>` on RAM
+
+Showing all `require <file>` calls that consume 0.3 MiB or more of RSS
+Configure with `CUT_OFF=0` for all entries or `CUT_OFF=5` for few entries
+Note: Files only count against RAM on their first load.
+      If multiple libraries require the same file, then
+       the 'cost' only shows up under the first library
+
+TOP: 54.7656 MiB
+  application: 31.9727 MiB
+    country_select: 24.9883 MiB
+      iso3166: 23.5508 MiB
+        iso4217: 0.4766 MiB
+          currencies/currency: 0.4141 MiB
+      sort_alphabetical: 1.1484 MiB
+        unicode_utils/general_category: 0.707 MiB
+          unicode_utils/gc: 0.6914 MiB
+        unicode_utils/compatibility_decomposition: 0.4258 MiB
+    sass-rails: 3.7695 MiB
+      sass/rails: 3.7695 MiB
+        sass/rails/helpers: 3.4141 MiB (Also required by: sass/rails/template)
+          sass: 3.4023 MiB (Also required by: sass/rails/importer, sass/rails/template, and 2 others)
+            sass/engine: 3.2734 MiB
+              sass/script: 1.0117 MiB (Also required by: sass/script/css_parser)
+                sass/script/functions: 0.3828 MiB (Also required by: sass/script/tree/funcall)
+              sass/scss: 0.9648 MiB
+                sass/scss/parser: 0.5117 MiB
+                sass/scss/static_parser: 0.3398 MiB
+        sass/rails/importer: 0.3047 MiB
+    pg: 1.5625 MiB (Also required by: active_record/connection_adapters/postgresql_adapter)
+      pg_ext: 1.5469 MiB
+    jbuilder: 1.1836 MiB
+      jbuilder/railtie: 0.8359 MiB
+        jbuilder/jbuilder_template: 0.8008 MiB
+          active_support/cache: 0.4961 MiB (Also required by: TOP)
+  mail: 9.7031 MiB
+    mime/types: 7.5078 MiB
+    mail/field: 1.1563 MiB
+  active_record/relation/predicate_builder: 2.6406 MiB
+    active_record/connection_adapters/postgresql_adapter: 0.7227 MiB (Also required by: TOP)
+      active_record/connection_adapters/postgresql/oid: 0.4141 MiB
+  /Users/Juan/dev/iso3166_exp/app/controllers/application_controller: 2.2734 MiB
+  action_view/base: 1.207 MiB (Also required by: action_view/view_paths)
+    action_view/template: 0.6875 MiB (Also required by: action_view/template/resolver, TOP)
+      erubis: 0.4883 MiB (Also required by: /Users/Juan/dev/iso3166_exp/app/controllers/application_controller)
+  active_record/relation: 0.3008 MiB
