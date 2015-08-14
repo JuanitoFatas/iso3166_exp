@@ -1,28 +1,13 @@
-== README
+# Memory Investigations of an Rails app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- static benchmark command: <kbd>bundle exec derailed bundle:mem</kbd>
+- dynamic benchmark command: <kbd>bundle exec derailed exec perf:mem</kbd>
 
-Things you may want to cover:
+benchmarks are under `doc/` folder with prefix like `static` and `dynamic` which
+uses static benchmark and dynamic benchmark commands respectively.
 
-* Ruby version
+- ENV
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+```
+export SECRET_KEY_BASE="88b723b7d14f3c33e08cc5e995d04ee0355a769de91c4343c04f03dbacf877bd4501ec480394128353a131f136bfd044a148c50821b98891f4795b2a78e0c042"
+```
